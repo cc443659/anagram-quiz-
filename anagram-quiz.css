@@ -1,0 +1,25 @@
+
+body {
+    font-family: Arvo;
+    font-size: calc(0.7rem + 1.1vw);
+ }
+h1 {
+    font-size: calc(1.2rem + 1.7vw);
+    text-align: center;
+}
+.px-2 {
+    padding-left: ($spacer * .5) !important;
+    padding-right: ($spacer * .5) !important;
+}
+#results {
+    display: none;
+    background-color: rgba(240, 248, 255, 0.45);
+    border: 2px double white;
+    width: 45%;
+}
+@keyframes movein {
+    0%  {transform: translateY(-5px); opacity: 75%;}
+    50% {transform: translateY(-2px);}
+    75% {transform: translateY(-0.5px);}
+    100% {transform: translateY(0px); opacity: 100%;}
+}
