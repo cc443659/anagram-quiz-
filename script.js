@@ -13,10 +13,10 @@
             if (answerInputElement_old) {
                 answerInputElement_old.removeEventListener("keydown", handleEnterKey);
             }
-
+            
             document.getElementById("questions").innerHTML += questions[count];
             document.getElementById("questions").innerHTML += ' <input autocomplete="off" id="answer"/> <br />';
-
+            
             let answerInputElement = document.getElementById("answer");
             answerInputElement.addEventListener("keydown", handleEnterKey);
         }
@@ -27,15 +27,17 @@
                 let inputValue = document.getElementById("answer").value;
                 console.log(inputValue[count]);
                 count += 1;
-
+                
                 document.getElementById("questions").innerHTML = "";
-
+                
                 getQuestion();
             } else {
                 document.getElementById("questions").innerHTML = "Quiz complete.";
                 setTimeout(() => console.log("Quiz complete."), 1800);
+
                 document.getElementById("leadP").innerHTML = null;
                 document.getElementById("extra").innerHTML = null;
+                
                 calcResultsAnim();
             }
         }
@@ -60,5 +62,7 @@
     function displayResults() {
             box.style.display = "inline-block";
             box.style.animation = "movein 0.5s linear 1";
-            document.getElementById("userAnswer1").innerHTML = inputValue[1];
+            
+            let userAnswer1 = inputValue[1];
+            document.getElementById("userAnswer1").innerHTML = userAnswer1.value;
     }
