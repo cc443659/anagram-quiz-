@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta data -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anagram Quiz</title>
+    <!-- dependencies -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- css file link -->
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  
-    <div class="p-3 mb-2 bg-dark text-white">
-        <div class="mx-auto p-2" style="width: 200px;">
-            <h1>Anagram Quiz</h1>
-        </div>
-    </div>
-    <p id="leadP" class="px-2">Solve the following anagrams - click the <span style="font-weight: 700;">Questions</span> button to continue.</p>
-    <div class="px-4" id="questions"></div>
-    <div id="startButton" class="container">
-        <div class="row">
-            <div class="col-span ml-4">
-                <button type="button" class="btn btn-info" style="color:aliceblue; font-weight: 900;" onclick="getQuestion(); quizStart(); buttonHide();">Questions</button>
+    <header class="p-3 mb-2 bg-dark text-white">
+        <h1 class="mx-auto p-2" style="width: 200px;">Anagram Quiz</h1>
+    </header>
+    <section>
+        <p id="leadP" class="px-2">Solve the following anagrams - click the <b>Start quiz</b> button to continue.</p>
+        <div class="px-4" id="questions"></div>
+        <div id="startButton" class="container">
+            <div class="row">
+                <div class="col-span ml-4">
+                    <button type="button" class="btn btn-info" style="color:aliceblue; font-weight: 900;" onclick="quizStart();">Start quiz</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="px-4">
-      <div id="results">
-        <p>Answer 1: </p><p id="userAnswer1"></p>
-      </div>  
-    </div>
+    </section>
+
+    <section id="results" class="mx-2 p-4 flex-md-row"> <!-- shown to user at end of quiz -->
+        <p>Answer 1: <span id="userAnswer1"></span></p>
+        <p>Answer 2: <span id="userAnswer2"></span></p>
+        <p>Answer 3: <span id="userAnswer3"></span></p>
+        <p>Answer 4: <span id="userAnswer4"></span></p>
+        <p>Answer 5: <span id="userAnswer5"></span></p>
+    </section>
     <p id="extra" class="px-2"></p>
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- loads after main body content -->
 </body>
 </html>
